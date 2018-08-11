@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "composerrepo.fullname" . }}
+  labels:
+    app: {{ template "composerrepo.name" . }}
+    chart: {{ template "composerrepo.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  config.yml: |
+{{ toYaml .Values.config | indent 4 }}
