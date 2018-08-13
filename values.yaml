@@ -11,17 +11,17 @@ image:
 
 config:
   providers: true
-  output:
-    type: azure
-    accountName: ACCOUNT_NAME
-    accountKey: ACCOUNT_KEY
-    container: packages
-  inputs:
-    gitlab:
-      type: gitlab
-      url: https://gitlab.com
-      token: TOKEN
-      group: group
+  output: {}
+#    type: azure
+#    accountName: ACCOUNT_NAME
+#    accountKey: ACCOUNT_KEY
+#    container: packages
+  inputs: {}
+#    gitlab:
+#      type: gitlab
+#      url: https://gitlab.com
+#      token: TOKEN
+#      group: group
 
 service:
   type: ClusterIP
